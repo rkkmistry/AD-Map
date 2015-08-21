@@ -1,0 +1,179 @@
+$light: #aaa;
+$normal: #666;
+$hover: #000;
+$dark: #111;
+$bg-color: #fff;
+
+@import "reset";
+
+body {
+  background-color: $bg-color;
+  color: $normal;
+}
+
+a {
+  text-decoration: underline;
+  color: $light;
+    
+  &:hover {
+    color: $hover;
+    cursor: pointer;
+  }
+}
+
+header {
+  .google-maps {
+    position: relative;
+    padding-bottom: 100%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+    }
+  
+  .google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    margin-bottom: 50px;
+  }
+  
+  .google-form {
+    position: relative;
+    padding-bottom: 100%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+    }
+  
+  .google-form iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    margin-bottom: 50px;
+  }
+  
+  @media (min-width: 768px) {
+    .google-maps {
+      padding-bottom: 60%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .google-maps {
+      padding-bottom: 45%;
+    }
+  }
+}
+
+.sections {
+  max-width: 860px;
+  text-align: center;
+  font-family: 'Slabo 13px', sans-serif;
+  font-size: 13px;
+  margin: 30px auto 0;
+  
+  a {
+    display: block;
+    padding: 5px;
+  }
+  
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.desk-sections {
+  max-width: 860px;
+  text-align: center;
+  font-family: 'Slabo 13px', sans-serif;
+  font-size: 13px;
+  margin: 30px auto 0;
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2% 5%;
+  
+  .entry {
+    margin: 20px 0;
+  }
+  
+  h1, h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: 40px 0 20px;
+    
+    a {
+      text-decoration: none;
+      color: $normal;
+      
+      &:hover {
+        color: $normal;  
+      }
+    }
+  }
+  
+  h2 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    line-height: 1.5em;
+    font-size: 13px;
+    font-family: 'Slabo 13px', serif;
+    color: $light;
+    margin-bottom: 5px;
+  }
+  
+  span {
+    font-weight: 700;
+  }
+  
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3em;
+    }
+    
+    h2 {
+      font-size: 2em;
+    }
+  }
+  
+  .suggest{
+    text-align: center;
+    margin-bottom: 40px;
+    
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.2em;
+    }
+  
+    a {
+      background-color: orange;
+      font-family: 'Lato', sans-serif;
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #eee;
+      
+      &:hover {
+        background-color: darken(orange, 15%);
+      }
+    }
+  }
+  
+}
+
